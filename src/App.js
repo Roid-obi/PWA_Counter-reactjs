@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+//Counter.jsx
+import React, { useState } from 'react';
+import Button from '@mui/material/Button';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+function Counter(props) {
+    let [count, setCount] = useState(0)
 
-export default App;
+    function increment() {
+        setCount(count + 1);
+    }
+
+    function decrement() {
+        setCount(count - 1);
+    }
+
+    return(
+        <div style={{textAlign: 'center'}}>
+            <h3>Counter App</h3>
+            <div>
+                <Button variant="contained" onClick={decrement}>-</Button> 
+                  <span> {count} </span>
+                <Button variant="contained" onClick={increment}>+</Button>
+            </div>
+        </div>
+    );
+};
+
+export default Counter;
