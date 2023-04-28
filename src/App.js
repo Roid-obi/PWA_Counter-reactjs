@@ -17,9 +17,9 @@ function Counter(props) {
         <div style={{textAlign: 'center'}}>
             <h3>Counter App</h3>
             <div>
-                <Button variant="contained" onClick={decrement}>-</Button> 
-                  <span> {count} </span>
-                <Button variant="contained" onClick={increment}>+</Button>
+              <Button variant="contained" onClick={decrement}>-</Button> 
+                <span> {count} </span>
+              <Button variant="contained" onClick={increment}>+</Button>
             </div>
         </div>
     );
